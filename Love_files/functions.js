@@ -34,9 +34,9 @@ $(window).resize(function () {
 	};
 })(jQuery);
 
-function timeElapse(Datum) {
-	var current = Datum();
-	var seconds = (Datum.parse(current) - Datum.parse(Datum)) / 1000;
+function timeElapse(date) {
+	var current = Date();
+	var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
 	var days = Math.floor(seconds / (3600 * 24));
 	seconds = seconds % (3600 * 24);
 	var hours = Math.floor(seconds / 3600);
